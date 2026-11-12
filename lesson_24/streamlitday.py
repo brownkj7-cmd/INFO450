@@ -37,18 +37,18 @@ st.sidebar.head("Filters")
 x_var=st.selectbox("X axis", ['TV', 'radio', 'newspaper'])
 # 
 # #show scat plot
- fig=px.scatter(df, x = x_var, y= 'sales',
+fig=px.scatter(df, x = x_var, y= 'sales',
            labels={'TV': 'Tv add spend', 'radio': 'Radio add Spend'})
 # 
 st.plotly_chart(fig)
 # 
 # #show bar plot
- sales_per_city=df.groupby('City')['sales'].sum().reset_index()
+sales_per_city=df.groupby('City')['sales'].sum().reset_index()
 # 
- fig=px.bar(sales_per_city, x='City', y='sales',
+fig=px.bar(sales_per_city, x='City', y='sales',
        labels={'sales': 'Total Sales'})
- st.plotly_chart(fig)
+st.plotly_chart(fig)
 # 
 # #show df
- st.dataframe(df)
+st.dataframe(df)
 #
