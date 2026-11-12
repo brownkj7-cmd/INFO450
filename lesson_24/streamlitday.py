@@ -24,7 +24,7 @@ px.bar(sales_per_city, x='City', y='sales',
       labels={'sales': 'Total Sales'})
 
 # Commented out IPython magic to ensure Python compatibility.
- %%writefile app.py
+
 import streamlit as st
 import pandas as pd
 import plotly.express as px
