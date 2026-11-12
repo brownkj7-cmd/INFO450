@@ -12,7 +12,7 @@ import plotly.express as px
 
 df=pd.read_csv('Advertising_F.csv')
 
-df.head(10)
+df.header(10)
 
 px.scatter(df, x = 'TV', y= 'radio',
            labels={'TV': 'Tv add spend', 'radio': 'Radio add Spend'})
