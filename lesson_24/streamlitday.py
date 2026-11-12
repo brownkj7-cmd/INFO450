@@ -24,31 +24,31 @@ px.bar(sales_per_city, x='City', y='sales',
       labels={'sales': 'Total Sales'})
 
 # Commented out IPython magic to ensure Python compatibility.
-# %%writefile app.py
-# import streamlit as st
-# import pandas as pd
-# import plotly.express as px
+ %%writefile app.py
+import streamlit as st
+import pandas as pd
+import plotly.express as px
 # 
-# df=pd.read_csv('Advertising_F.csv')
+ df=pd.read_csv('Advertising_F.csv')
 # 
-# st.title('Advertising effectivness Sameer Dwivedy')
+st.title('Advertising effectivness Sameer Dwivedy')
 # 
-# st.sidebar.head("Filters")
-# x_var=st.selectbox("X axis", ['TV', 'radio', 'newspaper'])
+st.sidebar.head("Filters")
+x_var=st.selectbox("X axis", ['TV', 'radio', 'newspaper'])
 # 
 # #show scat plot
-# fig=px.scatter(df, x = x_var, y= 'sales',
-#            labels={'TV': 'Tv add spend', 'radio': 'Radio add Spend'})
+ fig=px.scatter(df, x = x_var, y= 'sales',
+           labels={'TV': 'Tv add spend', 'radio': 'Radio add Spend'})
 # 
-# st.plotly_chart(fig)
+st.plotly_chart(fig)
 # 
 # #show bar plot
-# sales_per_city=df.groupby('City')['sales'].sum().reset_index()
+ sales_per_city=df.groupby('City')['sales'].sum().reset_index()
 # 
-# fig=px.bar(sales_per_city, x='City', y='sales',
-#       labels={'sales': 'Total Sales'})
-# st.plotly_chart(fig)
+ fig=px.bar(sales_per_city, x='City', y='sales',
+       labels={'sales': 'Total Sales'})
+ st.plotly_chart(fig)
 # 
 # #show df
-# st.dataframe(df)
+ st.dataframe(df)
 #
